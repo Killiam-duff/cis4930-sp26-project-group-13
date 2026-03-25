@@ -5,7 +5,7 @@
 * William Kilduff - WRK24
 * Ty Officer - TRO23
 * Jack Waite - JRW24a
-* Kat Suslova - 
+* Kat Suslova - ES24BE
 
 ## Project Description
 
@@ -24,5 +24,6 @@ Dataset source: [https://www.kaggle.com/datasets/josuefernandezc/mlb-hitting-dat
 
 1. Do the amount of walks directly correlate to the number of HR a player has?
 2. how does age affect player performance? use OPS as the number dictating player performance
-3. Do younger players have higher SB than older players?
-4. Do players with more walks have higher OBP?
+3. How common is a .300 Batting Average in the league?
+4. Do younger players have higher SB than older players?
+5. Do players with more walks have higher OBP?
