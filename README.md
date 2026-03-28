@@ -5,11 +5,10 @@
 * William Kilduff - WRK24
 * Ty Officer - TRO23
 * Jack Waite - JRW24a
-* Kat Suslova - ES24BE
 
 ## Project Description
 
-This project analyzes batting statistics using Python, NumPy, and pandas to identify 
+In this project we analyze batting statistics using Python, NumPy, and pandas to identify 
 specific trends inside the game of baseball that lead to player value in relation to
 batting. This data supports decisions involving team strategy, player development, and
 roster management. information such as batting average, home runs, runs batted in, and 
@@ -22,8 +21,8 @@ Dataset source: [https://www.kaggle.com/datasets/josuefernandezc/mlb-hitting-dat
 
 ## Research Questions
 
-1. Do the amount of walks directly correlate to the number of HR a player has?
-2. how does age affect player performance? use OPS as the number dictating player performance
-3. How common is a .300 Batting Average in the league?
-4. Do younger players have higher SB than older players?
+1. where do most players fall relative to league average?
+2. Do players with more home runs generally produce higher WAR?
+3. Are batting averages, OPS, and home run production different between the American League and National League?
+4. How does the amount of SB and OPS change with age?
 5. Do players with more walks have higher OBP?
