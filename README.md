@@ -2,9 +2,9 @@
 
 ## Group Members
 
-* William Kilduff - WRK24
-* Ty Officer - TRO23
-* Jack Waite - JRW24a
+* William Kilduff - FSUID: WRK24 - Github: Killiam-duff
+* Ty Officer - FSUID: TRO23 - Github: officety01
+* Jack Waite - FSUID: JRW24a - Github: SirCatolot
 
 ## Project Description
 
