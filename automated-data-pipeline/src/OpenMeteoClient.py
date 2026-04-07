@@ -43,7 +43,11 @@ class OpenMeteoClient:
             "timezone": "America/New_York",
         }
 
-        response = self.session.get(self.BASE_URL, params=params)
+        response = self.session.get(self.BASE_URL, params=params, timeout=10)
+
+        # Print status code for debugging
+        print(f"Status Code: {response.status_code}")
+
         response.raise_for_status()
 
         data = response.json()
