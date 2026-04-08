@@ -7,8 +7,9 @@ saves raw JSON and processed CSV output.
 
 import json
 import os
-from datetime import date, timedelta
+from datetime import date, timedelta, datetime
 
+import pandas as pd
 from OpenMeteoClient import OpenMeteoClient
 
 
@@ -26,7 +27,7 @@ START_DATE = (date.today() - timedelta(days=13)).isoformat()
 
 # output paths
 RAW_JSON_PATH = os.path.join("data", "raw", "weather_raw.json")
-
+CSV_PATH = os.path.join("data", "processed", "weather_data.csv")
 
 # TODO this is just a temp json dump to help view the raw data stucture.
 # to be deleted in the future. 
@@ -55,15 +56,24 @@ def main():
     if not rows:
         print("\nPIPELINE ERROR: no data was collected.")
         return
+    
+    #adding run tumestamp to rows
+    for row in rows:
+        row["run_timestamp"] =  datetime.now().isoformat()
 
     # TODO append raw json rows to csv/sqllite db
     # structure of raw rows found in raw/weather_raw.json
     # temp structure of processed rows (to be saved in csv/sqlite instead of json):
     save_json(rows, RAW_JSON_PATH)
     
+    #save the processed data to file
+    df = pd.DataFrame(rows)
+    os.makedirs(os.path.dirname(CSV_PATH), exist_ok=True)
+    df.to_csv(CSV_PATH, index=False)
+
+    print(f"Saved file to {CSV_PATH}") 
 
     print(f"\nSUCCESS: collected {len(rows)} total records.")
-
 
 if __name__ == "__main__":
     main()
