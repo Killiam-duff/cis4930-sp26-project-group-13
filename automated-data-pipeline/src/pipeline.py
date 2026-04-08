@@ -28,7 +28,9 @@ START_DATE = (date.today() - timedelta(days=13)).isoformat()
 
 # output paths
 RAW_JSON_PATH = os.path.join("data", "raw", "weather_raw.json")
-CSV_PATH = os.path.join("data", "processed", "weather_data.csv")
+BASE_DIR = Path(__file__).resolve().parent
+CSV_PATH = BASE_DIR / "data" / "processed" / "weather_data.csv"
+#CSV_PATH = os.path.join("data", "processed", "weather_data.csv")
 
 # TODO this is just a temp json dump to help view the raw data stucture.
 # to be deleted in the future. 
@@ -70,6 +72,7 @@ def main():
     #save the processed data to file
     df = pd.DataFrame(rows)
     print(df.head())
+    print(CSV_PATH)
     os.makedirs(os.path.dirname(CSV_PATH), exist_ok=True)
     df.to_csv(CSV_PATH, index=False)
 
