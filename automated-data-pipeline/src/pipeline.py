@@ -11,7 +11,16 @@ from datetime import date, timedelta, datetime
 
 import pandas as pd
 from OpenMeteoClient import OpenMeteoClient
+import logging
 
+
+#setup logging config to handle logging throughout, gets time and messages
+#format is timestamp, log type, and logging messages
+logging.basicConfig(
+    filename="../logs/pipeline.log",
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
 
 # Florida panhandle cities that William outlined in README
 # you can't call open meteo with city names, so I found the lat and long for each city.
@@ -37,8 +46,10 @@ def save_json(rows, path):
     with open(path, "w") as f:
         json.dump(rows, f, indent=2)
     print(f"Saved raw JSON to {path}")
+    logging.info(f"Saved raw JSON to {path}")
 
 def main():
+    logging.info("Pipeline Started")
     print("=" * 50)
     print("Weather Data Pipeline")
     print(f"Date range: {START_DATE} to {END_DATE}")
@@ -49,12 +60,15 @@ def main():
 
     try:
         rows = client.get_weather_bulk(CITIES, START_DATE, END_DATE)
+        logging.info("Weather data gathered successfully")
     except Exception as e:
         print(f"\nPIPELINE ERROR: unexpected failure - {e}")
+        logging.error("Pipeline has failed: {e}",)
         return
 
     if not rows:
         print("\nPIPELINE ERROR: no data was collected.")
+        logging.error("No data has been collected")
         return
     
     #adding run tumestamp to rows
@@ -71,9 +85,11 @@ def main():
     os.makedirs(os.path.dirname(CSV_PATH), exist_ok=True)
     df.to_csv(CSV_PATH, index=False)
 
-    print(f"Saved file to {CSV_PATH}") 
+    print(f"Saved file to {CSV_PATH}")
+    logging.info(f"Saved CSV file to {CSV_PATH}")
 
     print(f"\nSUCCESS: collected {len(rows)} total records.")
+    logging.info(f"Pipeling completed sucessfully with {len(rows)} total records")
 
 if __name__ == "__main__":
     main()

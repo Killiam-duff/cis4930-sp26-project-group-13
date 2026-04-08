@@ -1,0 +1,5 @@
+2026-04-08 14:25:55,589 - INFO - Pipeline Started
+2026-04-08 14:26:00,148 - INFO - Weather data gathered successfully
+2026-04-08 14:26:00,154 - INFO - Saved raw JSON to data\raw\weather_raw.json
+2026-04-08 14:26:00,194 - INFO - Saved CSV file to data\processed\weather_data.csv
+2026-04-08 14:26:00,195 - INFO - Pipeling completed sucessfully with 42 total records
