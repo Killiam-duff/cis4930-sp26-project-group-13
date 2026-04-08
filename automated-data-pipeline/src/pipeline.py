@@ -10,7 +10,7 @@ import os
 from datetime import date, timedelta, datetime
 
 import pandas as pd
-
+from pathlib import Path
 from OpenMeteoClient import OpenMeteoClient
 
 
@@ -69,9 +69,11 @@ def main():
     
     #save the processed data to file
     df = pd.DataFrame(rows)
+    print(df.head())
     os.makedirs(os.path.dirname(CSV_PATH), exist_ok=True)
-    df.to_csv(CSV_PATH, mode='a', header=not os.path.exists(CSV_PATH), index=False)
-    print(f"Saved processed CSV to {CSV_PATH}")
+    df.to_csv(CSV_PATH, index=False)
+
+    print(f"Saved file to {CSV_PATH}") 
 
     print(f"\nSUCCESS: collected {len(rows)} total records.")
 

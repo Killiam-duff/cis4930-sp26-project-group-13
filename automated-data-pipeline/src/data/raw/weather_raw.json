@@ -1,21 +1,12 @@
 [
   {
     "city": "Tallahassee",
-    "date": "2026-03-25",
-    "temp_max_f": 74.3,
-    "temp_min_f": 55.1,
-    "precipitation_in": 0.0,
-    "windspeed_max_mph": 10.5,
-    "run_timestamp": "2026-04-07T16:51:15.819414"
-  },
-  {
-    "city": "Tallahassee",
     "date": "2026-03-26",
     "temp_max_f": 81.3,
     "temp_min_f": 59.4,
     "precipitation_in": 0.0,
     "windspeed_max_mph": 5.2,
-    "run_timestamp": "2026-04-07T16:51:15.819445"
+    "run_timestamp": "2026-04-08T10:29:39.251495"
   },
   {
     "city": "Tallahassee",
@@ -24,7 +15,7 @@
     "temp_min_f": 63.0,
     "precipitation_in": 0.0,
     "windspeed_max_mph": 9.4,
-    "run_timestamp": "2026-04-07T16:51:15.819453"
+    "run_timestamp": "2026-04-08T10:29:39.251517"
   },
   {
     "city": "Tallahassee",
@@ -33,7 +24,7 @@
     "temp_min_f": 59.7,
     "precipitation_in": 0.0,
     "windspeed_max_mph": 13.5,
-    "run_timestamp": "2026-04-07T16:51:15.819458"
+    "run_timestamp": "2026-04-08T10:29:39.251522"
   },
   {
     "city": "Tallahassee",
@@ -42,7 +33,7 @@
     "temp_min_f": 55.3,
     "precipitation_in": 0.0,
     "windspeed_max_mph": 11.7,
-    "run_timestamp": "2026-04-07T16:51:15.819463"
+    "run_timestamp": "2026-04-08T10:29:39.251525"
   },
   {
     "city": "Tallahassee",
@@ -51,7 +42,7 @@
     "temp_min_f": 56.0,
     "precipitation_in": 0.0,
     "windspeed_max_mph": 8.3,
-    "run_timestamp": "2026-04-07T16:51:15.819468"
+    "run_timestamp": "2026-04-08T10:29:39.251528"
   },
   {
     "city": "Tallahassee",
@@ -60,7 +51,7 @@
     "temp_min_f": 61.9,
     "precipitation_in": 0.0,
     "windspeed_max_mph": 10.3,
-    "run_timestamp": "2026-04-07T16:51:15.819472"
+    "run_timestamp": "2026-04-08T10:29:39.251531"
   },
   {
     "city": "Tallahassee",
@@ -69,7 +60,7 @@
     "temp_min_f": 60.2,
     "precipitation_in": 0.0,
     "windspeed_max_mph": 8.8,
-    "run_timestamp": "2026-04-07T16:51:15.819477"
+    "run_timestamp": "2026-04-08T10:29:39.251533"
   },
   {
     "city": "Tallahassee",
@@ -78,7 +69,7 @@
     "temp_min_f": 62.4,
     "precipitation_in": 0.0,
     "windspeed_max_mph": 8.5,
-    "run_timestamp": "2026-04-07T16:51:15.819481"
+    "run_timestamp": "2026-04-08T10:29:39.251535"
   },
   {
     "city": "Tallahassee",
@@ -87,7 +78,7 @@
     "temp_min_f": 65.8,
     "precipitation_in": 0.0,
     "windspeed_max_mph": 10.0,
-    "run_timestamp": "2026-04-07T16:51:15.819485"
+    "run_timestamp": "2026-04-08T10:29:39.251538"
   },
   {
     "city": "Tallahassee",
@@ -96,7 +87,7 @@
     "temp_min_f": 64.7,
     "precipitation_in": 0.0,
     "windspeed_max_mph": 11.4,
-    "run_timestamp": "2026-04-07T16:51:15.819488"
+    "run_timestamp": "2026-04-08T10:29:39.251540"
   },
   {
     "city": "Tallahassee",
@@ -105,7 +96,7 @@
     "temp_min_f": 58.8,
     "precipitation_in": 0.0,
     "windspeed_max_mph": 8.9,
-    "run_timestamp": "2026-04-07T16:51:15.819490"
+    "run_timestamp": "2026-04-08T10:29:39.251542"
   },
   {
     "city": "Tallahassee",
@@ -114,25 +105,25 @@
     "temp_min_f": 56.5,
     "precipitation_in": 3.7,
     "windspeed_max_mph": 11.0,
-    "run_timestamp": "2026-04-07T16:51:15.819493"
+    "run_timestamp": "2026-04-08T10:29:39.251545"
   },
   {
     "city": "Tallahassee",
     "date": "2026-04-07",
-    "temp_max_f": 77.5,
+    "temp_max_f": 78.4,
     "temp_min_f": 54.4,
     "precipitation_in": 0.0,
     "windspeed_max_mph": 15.9,
-    "run_timestamp": "2026-04-07T16:51:15.819498"
+    "run_timestamp": "2026-04-08T10:29:39.251547"
   },
   {
-    "city": "Pensacola",
-    "date": "2026-03-25",
-    "temp_max_f": 71.1,
-    "temp_min_f": 58.8,
-    "precipitation_in": 0.0,
-    "windspeed_max_mph": 13.3,
-    "run_timestamp": "2026-04-07T16:51:15.819502"
+    "city": "Tallahassee",
+    "date": "2026-04-08",
+    "temp_max_f": 74.2,
+    "temp_min_f": 57.4,
+    "precipitation_in": 0.1,
+    "windspeed_max_mph": 17.7,
+    "run_timestamp": "2026-04-08T10:29:39.251549"
   },
   {
     "city": "Pensacola",
@@ -141,7 +132,7 @@
     "temp_min_f": 56.9,
     "precipitation_in": 0.0,
     "windspeed_max_mph": 9.0,
-    "run_timestamp": "2026-04-07T16:51:15.819506"
+    "run_timestamp": "2026-04-08T10:29:39.251551"
   },
   {
     "city": "Pensacola",
@@ -150,7 +141,7 @@
     "temp_min_f": 55.6,
     "precipitation_in": 0.0,
     "windspeed_max_mph": 11.5,
-    "run_timestamp": "2026-04-07T16:51:15.819510"
+    "run_timestamp": "2026-04-08T10:29:39.251553"
   },
   {
     "city": "Pensacola",
@@ -159,7 +150,7 @@
     "temp_min_f": 61.8,
     "precipitation_in": 0.0,
     "windspeed_max_mph": 17.0,
-    "run_timestamp": "2026-04-07T16:51:15.819515"
+    "run_timestamp": "2026-04-08T10:29:39.251555"
   },
   {
     "city": "Pensacola",
@@ -168,7 +159,7 @@
     "temp_min_f": 61.9,
     "precipitation_in": 0.0,
     "windspeed_max_mph": 19.8,
-    "run_timestamp": "2026-04-07T16:51:15.819519"
+    "run_timestamp": "2026-04-08T10:29:39.251633"
   },
   {
     "city": "Pensacola",
@@ -177,7 +168,7 @@
     "temp_min_f": 60.7,
     "precipitation_in": 0.0,
     "windspeed_max_mph": 11.7,
-    "run_timestamp": "2026-04-07T16:51:15.819523"
+    "run_timestamp": "2026-04-08T10:29:39.251638"
   },
   {
     "city": "Pensacola",
@@ -186,7 +177,7 @@
     "temp_min_f": 65.4,
     "precipitation_in": 0.0,
     "windspeed_max_mph": 11.8,
-    "run_timestamp": "2026-04-07T16:51:15.819537"
+    "run_timestamp": "2026-04-08T10:29:39.251640"
   },
   {
     "city": "Pensacola",
@@ -195,7 +186,7 @@
     "temp_min_f": 66.3,
     "precipitation_in": 0.0,
     "windspeed_max_mph": 12.3,
-    "run_timestamp": "2026-04-07T16:51:15.819541"
+    "run_timestamp": "2026-04-08T10:29:39.251642"
   },
   {
     "city": "Pensacola",
@@ -204,7 +195,7 @@
     "temp_min_f": 65.8,
     "precipitation_in": 0.0,
     "windspeed_max_mph": 13.0,
-    "run_timestamp": "2026-04-07T16:51:15.819546"
+    "run_timestamp": "2026-04-08T10:29:39.251645"
   },
   {
     "city": "Pensacola",
@@ -213,7 +204,7 @@
     "temp_min_f": 66.1,
     "precipitation_in": 0.0,
     "windspeed_max_mph": 11.1,
-    "run_timestamp": "2026-04-07T16:51:15.819549"
+    "run_timestamp": "2026-04-08T10:29:39.251647"
   },
   {
     "city": "Pensacola",
@@ -222,7 +213,7 @@
     "temp_min_f": 68.1,
     "precipitation_in": 0.0,
     "windspeed_max_mph": 10.9,
-    "run_timestamp": "2026-04-07T16:51:15.819551"
+    "run_timestamp": "2026-04-08T10:29:39.251649"
   },
   {
     "city": "Pensacola",
@@ -231,7 +222,7 @@
     "temp_min_f": 64.2,
     "precipitation_in": 14.0,
     "windspeed_max_mph": 10.2,
-    "run_timestamp": "2026-04-07T16:51:15.819553"
+    "run_timestamp": "2026-04-08T10:29:39.251651"
   },
   {
     "city": "Pensacola",
@@ -240,25 +231,25 @@
     "temp_min_f": 54.9,
     "precipitation_in": 0.0,
     "windspeed_max_mph": 13.0,
-    "run_timestamp": "2026-04-07T16:51:15.819556"
+    "run_timestamp": "2026-04-08T10:29:39.251653"
   },
   {
     "city": "Pensacola",
     "date": "2026-04-07",
-    "temp_max_f": 77.9,
+    "temp_max_f": 78.7,
     "temp_min_f": 50.8,
     "precipitation_in": 0.0,
     "windspeed_max_mph": 14.8,
-    "run_timestamp": "2026-04-07T16:51:15.819558"
+    "run_timestamp": "2026-04-08T10:29:39.251656"
   },
   {
-    "city": "Navarre",
-    "date": "2026-03-25",
-    "temp_max_f": 70.7,
-    "temp_min_f": 62.7,
-    "precipitation_in": 0.0,
-    "windspeed_max_mph": 10.8,
-    "run_timestamp": "2026-04-07T16:51:15.819560"
+    "city": "Pensacola",
+    "date": "2026-04-08",
+    "temp_max_f": 73.5,
+    "temp_min_f": 57.3,
+    "precipitation_in": 0.7,
+    "windspeed_max_mph": 16.3,
+    "run_timestamp": "2026-04-08T10:29:39.251658"
   },
   {
     "city": "Navarre",
@@ -267,7 +258,7 @@
     "temp_min_f": 56.2,
     "precipitation_in": 0.0,
     "windspeed_max_mph": 9.9,
-    "run_timestamp": "2026-04-07T16:51:15.819563"
+    "run_timestamp": "2026-04-08T10:29:39.251660"
   },
   {
     "city": "Navarre",
@@ -276,7 +267,7 @@
     "temp_min_f": 57.9,
     "precipitation_in": 0.0,
     "windspeed_max_mph": 12.1,
-    "run_timestamp": "2026-04-07T16:51:15.819565"
+    "run_timestamp": "2026-04-08T10:29:39.251662"
   },
   {
     "city": "Navarre",
@@ -285,7 +276,7 @@
     "temp_min_f": 61.7,
     "precipitation_in": 0.0,
     "windspeed_max_mph": 14.9,
-    "run_timestamp": "2026-04-07T16:51:15.819567"
+    "run_timestamp": "2026-04-08T10:29:39.251665"
   },
   {
     "city": "Navarre",
@@ -294,7 +285,7 @@
     "temp_min_f": 61.3,
     "precipitation_in": 0.0,
     "windspeed_max_mph": 16.0,
-    "run_timestamp": "2026-04-07T16:51:15.819569"
+    "run_timestamp": "2026-04-08T10:29:39.251667"
   },
   {
     "city": "Navarre",
@@ -303,7 +294,7 @@
     "temp_min_f": 57.6,
     "precipitation_in": 0.0,
     "windspeed_max_mph": 13.9,
-    "run_timestamp": "2026-04-07T16:51:15.819571"
+    "run_timestamp": "2026-04-08T10:29:39.251669"
   },
   {
     "city": "Navarre",
@@ -312,7 +303,7 @@
     "temp_min_f": 63.5,
     "precipitation_in": 0.0,
     "windspeed_max_mph": 11.8,
-    "run_timestamp": "2026-04-07T16:51:15.819573"
+    "run_timestamp": "2026-04-08T10:29:39.251671"
   },
   {
     "city": "Navarre",
@@ -321,7 +312,7 @@
     "temp_min_f": 66.2,
     "precipitation_in": 0.0,
     "windspeed_max_mph": 11.8,
-    "run_timestamp": "2026-04-07T16:51:15.819575"
+    "run_timestamp": "2026-04-08T10:29:39.251673"
   },
   {
     "city": "Navarre",
@@ -330,7 +321,7 @@
     "temp_min_f": 64.6,
     "precipitation_in": 0.0,
     "windspeed_max_mph": 14.5,
-    "run_timestamp": "2026-04-07T16:51:15.819577"
+    "run_timestamp": "2026-04-08T10:29:39.251675"
   },
   {
     "city": "Navarre",
@@ -339,7 +330,7 @@
     "temp_min_f": 62.5,
     "precipitation_in": 0.0,
     "windspeed_max_mph": 11.9,
-    "run_timestamp": "2026-04-07T16:51:15.819579"
+    "run_timestamp": "2026-04-08T10:29:39.251677"
   },
   {
     "city": "Navarre",
@@ -348,7 +339,7 @@
     "temp_min_f": 66.7,
     "precipitation_in": 0.0,
     "windspeed_max_mph": 12.0,
-    "run_timestamp": "2026-04-07T16:51:15.819581"
+    "run_timestamp": "2026-04-08T10:29:39.251680"
   },
   {
     "city": "Navarre",
@@ -357,7 +348,7 @@
     "temp_min_f": 65.0,
     "precipitation_in": 4.0,
     "windspeed_max_mph": 9.4,
-    "run_timestamp": "2026-04-07T16:51:15.819584"
+    "run_timestamp": "2026-04-08T10:29:39.251682"
   },
   {
     "city": "Navarre",
@@ -366,15 +357,24 @@
     "temp_min_f": 56.5,
     "precipitation_in": 0.0,
     "windspeed_max_mph": 13.4,
-    "run_timestamp": "2026-04-07T16:51:15.819586"
+    "run_timestamp": "2026-04-08T10:29:39.251684"
   },
   {
     "city": "Navarre",
     "date": "2026-04-07",
-    "temp_max_f": 79.3,
+    "temp_max_f": 80.6,
     "temp_min_f": 50.6,
     "precipitation_in": 0.0,
     "windspeed_max_mph": 16.8,
-    "run_timestamp": "2026-04-07T16:51:15.819588"
+    "run_timestamp": "2026-04-08T10:29:39.251686"
+  },
+  {
+    "city": "Navarre",
+    "date": "2026-04-08",
+    "temp_max_f": 73.1,
+    "temp_min_f": 53.8,
+    "precipitation_in": 0.1,
+    "windspeed_max_mph": 14.4,
+    "run_timestamp": "2026-04-08T10:29:39.251688"
   }
 ]
