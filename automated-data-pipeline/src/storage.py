@@ -9,8 +9,8 @@ import logging
 import pandas as pd
 
 # Output paths (override here or pass explicit paths to each function)
-CSV_PATH    = os.path.join("data", "processed", "weather_data.csv")
-DB_PATH     = os.path.join("data", "processed", "weather_data.db")
+CSV_PATH    = os.path.join("..", "data", "processed", "weather_data.csv")
+DB_PATH     = os.path.join("..", "data", "processed", "weather_data.db")
 TABLE_NAME  = "weather"
 
 # SQLite schema

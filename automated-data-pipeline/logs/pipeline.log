@@ -3,3 +3,11 @@
 2026-04-08 14:26:00,154 - INFO - Saved raw JSON to data\raw\weather_raw.json
 2026-04-08 14:26:00,194 - INFO - Saved CSV file to data\processed\weather_data.csv
 2026-04-08 14:26:00,195 - INFO - Pipeling completed sucessfully with 42 total records
+2026-04-09 11:20:02,129 - INFO - Pipeline started
+2026-04-09 11:20:16,384 - INFO - Weather data fetched successfully
+2026-04-09 11:20:16,390 - INFO - Saved raw JSON to ..\data\raw\weather_raw.json
+2026-04-09 11:20:16,417 - INFO - Saved CSV to ..\data\processed\weather_data.csv (42 rows)
+2026-04-09 11:20:16,418 - INFO - CSV saved to ..\data\processed\weather_data.csv
+2026-04-09 11:20:16,458 - INFO - Saved SQLite to ..\data\processed\weather_data.db (42 new rows inserted)
+2026-04-09 11:20:16,459 - INFO - SQLite saved to ..\data\processed\weather_data.db
+2026-04-09 11:20:16,460 - INFO - Pipeline completed successfully with 42 total records
