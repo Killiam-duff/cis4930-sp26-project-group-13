@@ -2,94 +2,111 @@
 Automated weather data pipeline.
 
 Fetches weather data for Florida panhandle cities using the Open-Meteo API,
-saves raw JSON and processed CSV output.
+saves raw JSON and delegates all persistent storage to storage.py.
 """
 
 import json
-import os
-from datetime import date, timedelta, datetime
-
-import pandas as pd
-from OpenMeteoClient import OpenMeteoClient
 import logging
+import os
+from datetime import date, datetime, timedelta
 
+from OpenMeteoClient import OpenMeteoClient
+import storage
 
 #setup logging config to handle logging throughout, gets time and messages
 #format is timestamp, log type, and logging messages
 logging.basicConfig(
-    filename="../logs/pipeline.log",
+    filename=os.path.join("..", "logs", "pipeline.log"),
     level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s"
+    format="%(asctime)s - %(levelname)s - %(message)s",
 )
 
-# Florida panhandle cities that William outlined in README
-# you can't call open meteo with city names, so I found the lat and long for each city.
+
+# Florida panhandle cities
 CITIES = [
     {"name": "Tallahassee", "latitude": 30.4383, "longitude": -84.2807},
     {"name": "Pensacola",   "latitude": 30.4213, "longitude": -87.2169},
     {"name": "Navarre",     "latitude": 30.4016, "longitude": -86.8633},
 ]
 
-# date range: last 14 days (gives 42+ rows across 3 cities)
-END_DATE = date.today().isoformat()
+# Date range: last 14 days (gives 42 rows across 3 cities)
+END_DATE   = date.today().isoformat()
 START_DATE = (date.today() - timedelta(days=13)).isoformat()
 
-# output paths
+# Raw JSON dump path (temporary — see TODO below)
 RAW_JSON_PATH = os.path.join("data", "raw", "weather_raw.json")
-CSV_PATH = os.path.join("data", "processed", "weather_data.csv")
+
 
 # TODO this is just a temp json dump to help view the raw data stucture.
 # to be deleted in the future. 
-def save_json(rows, path):
+
+# Jack - Not deleting because im scared it'll break something
+
+def save_raw_json(rows: list[dict], path: str) -> None:
     """raw data -> JSON"""
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w") as f:
         json.dump(rows, f, indent=2)
-    print(f"Saved raw JSON to {path}")
     logging.info(f"Saved raw JSON to {path}")
+    print(f"Saved raw JSON to {path}")
 
-def main():
-    logging.info("Pipeline Started")
+# Helper functions
+
+def fetch_weather(cities: list[dict], start: str, end: str) -> list[dict]:
+    """
+    Call the Open-Meteo API for all cities and return collected rows
+    """
+    client = OpenMeteoClient()
+    rows = client.get_weather_bulk(cities, start, end)
+    return rows
+
+
+def stamp_rows(rows: list[dict]) -> list[dict]:
+    """Add a run_timestamp to each row (in-place) and return the list."""
+    ts = datetime.now().isoformat()
+    for row in rows:
+        row["run_timestamp"] = ts
+    return rows
+
+def main() -> None:
+    logging.info("Pipeline started")
     print("=" * 50)
     print("Weather Data Pipeline")
-    print(f"Date range: {START_DATE} to {END_DATE}")
-    print(f"Cities: {', '.join(c['name'] for c in CITIES)}")
+    print(f"Date range : {START_DATE} to {END_DATE}")
+    print(f"Cities     : {', '.join(c['name'] for c in CITIES)}")
     print("=" * 50)
 
-    client = OpenMeteoClient()
-
+    # Fetch data from API
     try:
-        rows = client.get_weather_bulk(CITIES, START_DATE, END_DATE)
-        logging.info("Weather data gathered successfully")
+        rows = fetch_weather(CITIES, START_DATE, END_DATE)
+        logging.info("Weather data fetched successfully")
     except Exception as e:
-        print(f"\nPIPELINE ERROR: unexpected failure - {e}")
-        logging.error("Pipeline has failed: {e}",)
+        logging.error(f"Pipeline failed during fetch: {e}")
+        print(f"\nPIPELINE ERROR: unexpected failure — {e}")
         return
 
     if not rows:
+        logging.error("No data collected — aborting pipeline")
         print("\nPIPELINE ERROR: no data was collected.")
-        logging.error("No data has been collected")
         return
-    
-    #adding run tumestamp to rows
-    for row in rows:
-        row["run_timestamp"] =  datetime.now().isoformat()
 
-    # TODO append raw json rows to csv/sqllite db
-    # structure of raw rows found in raw/weather_raw.json
-    # temp structure of processed rows (to be saved in csv/sqlite instead of json):
-    save_json(rows, RAW_JSON_PATH)
-    
-    #save the processed data to file
-    df = pd.DataFrame(rows)
-    os.makedirs(os.path.dirname(CSV_PATH), exist_ok=True)
-    df.to_csv(CSV_PATH, index=False)
+    # Stamp each row with the current run timestamp
+    rows = stamp_rows(rows)
 
-    print(f"Saved file to {CSV_PATH}")
-    logging.info(f"Saved CSV file to {CSV_PATH}")
+    # Save raw JSON
+    save_raw_json(rows, RAW_JSON_PATH)
 
-    print(f"\nSUCCESS: collected {len(rows)} total records.")
-    logging.info(f"Pipeling completed sucessfully with {len(rows)} total records")
+    # Persist to CSV
+    storage.save_csv(rows)
+    logging.info(f"CSV saved to {storage.CSV_PATH}")
+
+    # Persist to SQLite
+    storage.save_sqlite(rows)
+    logging.info(f"SQLite saved to {storage.DB_PATH}")
+
+    print(f"\nSUCCESS: collected and stored {len(rows)} records.")
+    logging.info(f"Pipeline completed successfully with {len(rows)} total records")
+
 
 if __name__ == "__main__":
     main()
