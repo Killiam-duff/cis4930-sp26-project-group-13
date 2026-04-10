@@ -34,7 +34,7 @@ END_DATE   = date.today().isoformat()
 START_DATE = (date.today() - timedelta(days=13)).isoformat()
 
 # Raw JSON dump path (temporary — see TODO below)
-RAW_JSON_PATH = os.path.join("data", "raw", "weather_raw.json")
+RAW_JSON_PATH = os.path.join("..", "data", "raw", "weather_raw.json")
 
 
 # TODO this is just a temp json dump to help view the raw data stucture.
